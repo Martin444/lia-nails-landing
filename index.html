@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lía Nails - Servicios de Uñas y Belleza</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Three.js Canvas -->
+    <div id="canvas-container"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-gem"></i>
+                Lía Nails
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#galeria">Galería</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#contacto">Contacto</a>
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                    <i class="fas fa-moon"></i>
+                    <span>Modo Nocturno</span>
+                </button>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h1>Lía Nails</h1>
+                <p>Transformamos tus uñas y realzamos tu belleza natural con técnicas profesionales y diseños únicos</p>
+                <a href="#agenda" class="cta-button">
+                    <i class="fas fa-calendar-alt"></i>
+                    Reservar Cita
+                </a>
+            </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <section class="carousel-section" id="galeria">
+            <div class="section-header">
+                <h2>Galería de Trabajos</h2>
+                <p>Descubre algunos de nuestros trabajos más destacados</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="imagenes/7c96d2bec25be33b309ef5f961a18726.jpg" alt="Diseños únicos de uñas" class="slide-image">
+                    <div class="slide-content">
+                        <i class="fas fa-palette"></i>
+                        <h3>Diseños únicos de uñas</h3>
+                        <p>Arte personalizado que refleja tu estilo</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/images.jpg" alt="Manicura profesional" class="slide-image">
+                    <div class="slide-content">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <h3>Manicura profesional</h3>
+                        <p>Cuidado completo para tus manos</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/lifting.jpg" alt="Lifting de pestañas" class="slide-image">
+                    <div class="slide-content">
+                        <i class="fas fa-eye"></i>
+                        <h3>Lifting de pestañas</h3>
+                        <p>Mirada impactante y natural</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/laminado.jpg" alt="Laminado de cejas" class="slide-image">
+                    <div class="slide-content">
+                        <i class="fas fa-magic"></i>
+                        <h3>Laminado de cejas</h3>
+                        <p>Cejas perfectamente definidas</p>
+                    </div>
+                </div>
+                
+                <button class="carousel-nav prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" onclick="goToSlide(0)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide(1)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide(2)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="servicios">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos una amplia gama de servicios de belleza y cuidado personal</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Manicura</h3>
+                    <p>Manicura clásica, francesa, con gel y diseños personalizados. Cuidamos cada detalle de tus uñas con productos de alta calidad.</p>
+                    <div class="service-price">Desde $5.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Pedicura</h3>
+                    <p>Pedicura relajante y profesional. Deja tus pies suaves y hermosos con nuestros tratamientos especializados.</p>
+                    <div class="service-price">Desde $7.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseños Artísticos</h3>
+                    <p>Nail art personalizado, decoraciones únicas y diseños que reflejan tu personalidad y estilo único.</p>
+                    <div class="service-price">Desde $8.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Lifting de Pestañas</h3>
+                    <p>Alarga y curva tus pestañas naturalmente. Resultados duraderos y mirada impactante que dura hasta 8 semanas.</p>
+                    <div class="service-price">$6.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Laminado de Cejas</h3>
+                    <p>Cejas perfectamente moldeadas y definidas. Tratamiento que dura hasta 6 semanas para un look impecable.</p>
+                    <div class="service-price">$6.000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Tratamientos Especiales</h3>
+                    <p>Extensiones, fortalecimiento de uñas y tratamientos nutritivos para manos y pies con productos premium.</p>
+                    <div class="service-price">Consultar</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Section -->
+        <section class="appointment" id="agenda">
+            <div class="section-header">
+                <h2>Reserva tu Cita</h2>
+                <p>Agenda tu cita de forma rápida y sencilla</p>
+            </div>
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-group">
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="Teléfono" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email (opcional)">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-cut"></i>
+                        <select required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="manicura">Manicura</option>
+                            <option value="pedicura">Pedicura</option>
+                            <!-- <option value="disenos">Diseños Artísticos</option> -->
+                            <option value="lifting">Lifting de Pestañas</option>
+                            <option value="laminado">Laminado de Cejas</option>
+                            <option value="combo">Combo Especial</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="form-input-wrapper">
+                            <i class="fas fa-calendar"></i>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-input-wrapper">
+                            <i class="fas fa-clock"></i>
+                            <input type="time" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-input-wrapper">
+                        <i class="fas fa-comment"></i>
+                        <textarea placeholder="Mensaje adicional (opcional)" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="button" class="whatsapp-button" onclick="sendWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Confirmar por WhatsApp
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Contacto
+                </h3>
+                <p><i class="fas fa-phone"></i> Teléfono: +54 9 3873 446995</p>
+                <p><i class="fas fa-envelope"></i> Email: analiaceciliacruz@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>
+                    <i class="fas fa-clock"></i>
+                    Horarios
+                </h3>
+                <p>Lunes a Viernes: 9:00 - 19:00</p>
+                <p>Sábados: 9:00 - 17:00</p>
+                <p>Domingos: Cerrado</p>
+            </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lía Nails. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
